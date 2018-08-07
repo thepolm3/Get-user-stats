@@ -19,13 +19,17 @@ width = 1
 labels = [s[0] for s in subredditScores[:N]] + ['other']
 votes = [s[1][0] + s[1][1] for s in subredditScores]
 votes = votes[:N] + [sum(votes[N:])]
-plt.bar(ind, votes, width, color = 'red')
+bar1 = plt.bar(ind, votes, width, color = 'red')
 
 votes = [s[1][0] for s in subredditScores]
 votes = votes[:N] + [sum(votes[N:])]
-plt.bar(ind, votes, width, color = 'blue')
+bar2 = plt.bar(ind, votes, width, color = 'blue')
 
+plt.legend([bar1,bar2], ['submissions','comments'])
 plt.xticks(ind, labels, rotation='vertical')
 
 plt.tight_layout()
-plt.show()
+plt.savefig('plot.png')
+
+if __name__ == '__main__':
+	plt.show()
