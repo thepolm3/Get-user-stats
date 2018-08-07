@@ -1,5 +1,7 @@
 # Get User Stats
-Get the votes of a user and displays the results as a graph
+Get the votes of a user and displays the results as a graph, for example
+
+![My stats](https://github.com/thepolm3/Get-user-stats/blob/master/plot.png)
 
 # Requirements
 * [python 3.6](python.org)
