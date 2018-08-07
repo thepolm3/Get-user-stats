@@ -5,7 +5,9 @@ from pprint import pprint
 subredditScores = []
 with open('scores.txt') as f:
 
+	username = f.readline()[:-1]
 	for line in f.readlines():
+
 		subreddit, scores, n = line.split(':')
 		scores = [int(i) for i in scores.split('+')]
 		n = [int(i) for i in n.split('+')]
@@ -28,8 +30,9 @@ bar2 = plt.bar(ind, votes, width, color = 'blue')
 plt.legend([bar1,bar2], ['submissions','comments'])
 plt.xticks(ind, labels, rotation='vertical')
 
-plt.tight_layout()
-plt.savefig('plot.png')
+plt.title(f"/u/{username}'s {N} Highest Grossing Subreddits")
+plt.ylabel('Net Votes')
 
-if __name__ == '__main__':
-	plt.show()
+plt.tight_layout()
+plt.show()
+plt.savefig('plot.png')
