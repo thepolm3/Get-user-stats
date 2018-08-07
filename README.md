@@ -1,5 +1,5 @@
 # Get User Stats
-Get the votes of a user and 
+Get the votes of a user and displays the results as a graph
 
 # Requirements
 * [python 3.6](python.org)
@@ -13,6 +13,9 @@ client_secret = 'my_secret'
 
 To run use
 >python getUserStats.py user_name
+
 on the commandline, then
+
 >python createGraph.py
+
 to create a graph of the data
