@@ -6,7 +6,7 @@ Get the votes of a user and displays the results as a graph, for example
 # Requirements
 * [python 3.6](python.org)
 * [praw](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html)
-* secret.py containg your client_id and client_secret
+* secret.py containg your reddit [client_id and client_secret](https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps) like this
 
 ```
 client_id = 'my_id'
